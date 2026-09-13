@@ -29,6 +29,7 @@ protected:
 
 private:
     QLabel *m_titleLabel;
+    QLabel *m_currentFolderLabel;
     QLineEdit *m_promptInput;
     QPushButton *m_searchButton;
     QLabel *m_statusLabel;
