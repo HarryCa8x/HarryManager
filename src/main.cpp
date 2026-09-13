@@ -93,7 +93,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain(dolphinTranslationDomain);
 
     KAboutData aboutData(QStringLiteral("dolphin"),
-                         i18n("Dolphin"),
+                         i18n("HarryManager"),
                          QStringLiteral(DOLPHIN_VERSION_STRING),
                          i18nc("@title", "File Manager"),
                          KAboutLicense::GPL,
