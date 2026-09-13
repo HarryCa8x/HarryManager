@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Dolphin
+Name=HarryManager
 Name[ar]=دولفين
 Name[ast]=Dolphin
 Name[az]=Dolphin
@@ -68,7 +68,7 @@ Icon=org.kde.dolphin
 Type=Application
 X-DocPath=dolphin/index.html
 Categories=Qt;KDE;System;FileTools;FileManager;
-GenericName=File Manager
+GenericName=AI File Manager
 GenericName[ar]=مدير ملفّات
 GenericName[ast]=Xestor de ficheros
 GenericName[az]=Fayl meneceri
@@ -132,7 +132,7 @@ GenericName[uk]=Менеджер файлів
 GenericName[vi]=Trình quản lí tệp
 GenericName[zh_CN]=文件管理器
 GenericName[zh_TW]=檔案管理員
-Comment=Manage your files
+Comment=Manage your files with HarryManager
 Comment[ar]=أدر ملفاتك
 Comment[bg]=Управление на файловете
 Comment[ca]=Gestioneu els fitxers

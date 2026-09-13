@@ -26,6 +26,7 @@
 #include "panels/folders/folderspanel.h"
 #include "panels/places/placespanel.h"
 #include "panels/terminal/terminalpanel.h"
+#include "panels/ai/aipanel.h"
 #include "search/dolphinquery.h"
 #include "selectionmode/actiontexthelper.h"
 #if KIO_VERSION >= QT_VERSION_CHECK(6, 24, 0)
@@ -2571,6 +2572,21 @@ void DolphinMainWindow::setupDockWidgets()
                                     "</interface> to display it again.</para>")
                              + panelWhatsThis);
 
+    // Setup "AI Assistant"
+    DolphinDockWidget *aiDock = new DolphinDockWidget(i18nc("@title:window", "AI Assistant"), this);
+    aiDock->setLocked(lock);
+    aiDock->setObjectName(QStringLiteral("aiDock"));
+    aiDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
+
+    m_aiPanel = new AIPanel(aiDock);
+    m_aiPanel->setCustomContextMenuActions({lockLayoutAction});
+    aiDock->setWidget(m_aiPanel);
+
+    createPanelAction(QIcon::fromTheme(QStringLiteral("help-hint")), QKeySequence(), aiDock, QStringLiteral("show_ai_panel"));
+
+    addDockWidget(Qt::RightDockWidgetArea, aiDock);
+    connect(this, &DolphinMainWindow::urlChanged, m_aiPanel, &AIPanel::setUrl);
+
     QAction *focusPlacesPanel = actionCollection()->addAction(QStringLiteral("focus_places_panel"));
     focusPlacesPanel->setText(i18nc("@action:inmenu View", "Focus Places Panel"));
     focusPlacesPanel->setToolTip(i18nc("@info:tooltip", "Move keyboard focus to and from the Places panel."));
@@ -2590,6 +2606,7 @@ void DolphinMainWindow::setupDockWidgets()
 #endif
     panelsMenu->addAction(ac->action(QStringLiteral("show_folders_panel")));
     panelsMenu->addAction(ac->action(QStringLiteral("show_terminal_panel")));
+    panelsMenu->addAction(ac->action(QStringLiteral("show_ai_panel")));
     panelsMenu->addSeparator();
     panelsMenu->addAction(lockLayoutAction);
     panelsMenu->addSeparator();

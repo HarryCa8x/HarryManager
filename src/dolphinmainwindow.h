@@ -49,6 +49,7 @@ class KToolBarPopupAction;
 class QToolButton;
 class PlacesPanel;
 class TerminalPanel;
+class AIPanel;
 class ServiceMenuShortcutManager;
 
 /** Used to identify that a custom command should be triggered on a view background double-click.*/
@@ -792,6 +793,7 @@ private:
 
     TerminalPanel *m_terminalPanel;
     PlacesPanel *m_placesPanel;
+    AIPanel *m_aiPanel = nullptr;
     bool m_tearDownFromPlacesRequested;
 
     KToolBarPopupAction *m_backAction;

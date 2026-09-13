@@ -95,7 +95,7 @@ int main(int argc, char **argv)
     KAboutData aboutData(QStringLiteral("dolphin"),
                          i18n("HarryManager"),
                          QStringLiteral(DOLPHIN_VERSION_STRING),
-                         i18nc("@title", "File Manager"),
+                         i18nc("@title", "AI File Manager"),
                          KAboutLicense::GPL,
                          i18nc("@info:credit", "© 2006–2025 The Dolphin Developers"));
     aboutData.setHomepage(QStringLiteral("https://apps.kde.org/dolphin"));

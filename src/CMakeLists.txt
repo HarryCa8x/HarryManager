@@ -312,6 +312,7 @@ target_sources(dolphinstatic PRIVATE
     panels/folders/treeviewcontextmenu.cpp
     panels/folders/folderspanel.cpp
     panels/terminal/terminalpanel.cpp
+    panels/ai/aipanel.cpp
     search/bar.cpp
     search/barsecondrowflowlayout.cpp
     search/chip.cpp
@@ -381,6 +382,7 @@ target_sources(dolphinstatic PRIVATE
     panels/folders/treeviewcontextmenu.h
     panels/folders/folderspanel.h
     panels/terminal/terminalpanel.h
+    panels/ai/aipanel.h
     search/bar.h
     search/barsecondrowflowlayout.h
     search/chip.h
